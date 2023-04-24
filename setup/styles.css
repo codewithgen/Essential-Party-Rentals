@@ -13,37 +13,39 @@ Variables
 
 :root {
   /* dark shades of primary color*/
-  --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-2: hsl(205, 77%, 27%);
-  --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%);
+  --clr-primary-1: hsla(21, 43%, 65%, 1);
+  --clr-primary-2: hsla(24, 43%, 76%, 1);
+  --clr-primary-3: hsla(26, 100%, 92%, 1);
+  --clr-primary-4: hsla(60, 12%, 68%, 1);
   /* primary/main color */
-  --clr-primary-5: #49a6e9;
+  --clr-primary-5: hsla(26, 31%, 84%, 1);
   /* lighter shades of primary color */
-  --clr-primary-6: hsl(205, 89%, 70%);
-  --clr-primary-7: hsl(205, 90%, 76%);
-  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-6: hsla(22, 31%, 76%, 1);
+  /* --clr-primary-7: hsla(22, 31%, 76%, 1); */
+  --clr-primary-8: hsla(30, 20%, 80%, 1);
   --clr-primary-9: hsl(205, 90%, 88%);
   --clr-primary-10: hsl(205, 100%, 96%);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
+  /* darkest green - used for headings */
+  --clr-green-1: hsla(60, 12%, 60%, 1);
+  --clr-green-2: hsla(75, 10%, 40%, 1);
+  --clr-green-3: hsla(170, 12%, 39%, 1);
+  --clr-green-4: hsla(60, 9%, 69%, 1);
   /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
+  /* --clr-grey-5: hsl(210, 22%, 49%);
   --clr-grey-6: hsl(209, 23%, 60%);
   --clr-grey-7: hsl(211, 27%, 70%);
-  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-8: hsl(210, 31%, 80%); */
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
   --clr-white: #fff;
-  --clr-red-dark: hsl(360, 67%, 44%);
+  /* --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
-  --clr-secondary: hsla(182, 63%, 54%);
+  --clr-secondary: hsla(182, 63%, 54%); */
   --clr-black: #222;
+
+  /* fonts and transitions */
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.3s linear;
@@ -301,8 +303,18 @@ nav {
 header {
   min-height: 100vh;
   background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
-    url(./hero-bcg.jpeg) center/cover no-repeat;
+    url(/hero-video.mp4) center/cover repeat;
 }
+
+header video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  
+
+}
+
 .banner {
   min-height: 100vh;
   display: grid;
@@ -332,9 +344,10 @@ header {
 .title span {
   color: var(--clr-secondary);
 }
-#about,
-#services,
-#tours {
+#About,
+#Services,
+#Rentals,
+#Gallery {
   height: 80vh;
 }
 #services {
