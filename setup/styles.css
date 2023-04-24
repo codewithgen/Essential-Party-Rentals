@@ -3,7 +3,7 @@
 Fonts
 ===============
 */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=EB+Garamond&display=swap');
 
 /*
 =============== 
@@ -46,8 +46,8 @@ Variables
   --clr-black: #222;
 
   /* fonts and transitions */
-  --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Open Sans", sans-serif;
+  --ff-primary: 'EB Garamond', serif;
+  --ff-secondary: 'Alice', serif;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
@@ -235,7 +235,7 @@ nav {
   color: var(--clr-secondary);
 }
 .logo {
-  height: 50px;
+  
 }
 .links-container {
   height: 0;
@@ -302,17 +302,19 @@ nav {
 /* hero */
 header {
   min-height: 100vh;
-  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
-    url(/hero-video.mp4) center/cover repeat;
+  /* background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
+    url( https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGYyYWYxZjgxZTU2ZjYwYzZhYmZkNzg5NTZlMDgyMDk4YmE3ZTkzNSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/zP6A7ukEcjrAfvTHoS/giphy-downsized-large.gif) center/cover repeat; */
 }
 
 header video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
-  z-index: -1;
+  object-fit: cover;
+  z-index: -2;
   
-
 }
 
 .banner {
