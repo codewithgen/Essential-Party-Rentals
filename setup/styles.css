@@ -103,6 +103,7 @@ h4 {
 }
 h1 {
   font-size: 3rem;
+
 }
 h2 {
   font-size: 2rem;
@@ -162,9 +163,13 @@ p {
 }
 .btn-white {
   color: var(--clr-white);
+  margin-top: 3rem;
+  background: hsla(21, 43%, 65%, 0.50);
   border-color: var(--clr-white);
   border-radius: 0;
   padding: 0.5rem 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  
 }
 .btn:hover {
   background: var(--clr-white);
@@ -172,7 +177,7 @@ p {
 }
 /* section */
 .section {
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
 }
 
 .section-center {
@@ -182,7 +187,7 @@ p {
 }
 @media screen and (min-width: 992px) {
   .section-center {
-    width: 95vw;
+    /* width: 95vw; */
   }
 }
 main {
@@ -190,6 +195,50 @@ main {
   display: grid;
   place-items: center;
 }
+
+
+/*
+=============== 
+Utilities classes
+===============
+*/
+
+.grid {
+  display: grid;
+}
+
+
+/*
+=============== 
+Grid
+===============
+*/
+.about {
+  grid-template-columns: repeat (2, 1fr) minmax(200px,500px);
+  grid-template-rows: 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 0px;
+  justify-items: center;
+  margin: 1rem;
+  padding: 35px;
+  font-size: 20px;
+
+}
+
+.grid-about-1 {
+   grid-area: 1 / 1 / 3 / 2;
+   height: auto;
+}
+
+.grid-about-2 {
+grid-area: 1 / 2 / 3 / 3;
+height: auto;
+}
+
+
+
+
+
 /*
 =============== 
 Scroll
@@ -231,12 +280,18 @@ nav {
   transition: var(--transition);
   cursor: pointer;
 }
+
 .nav-toggle:hover {
   color: var(--clr-secondary);
 }
+
 .logo {
-  
+  background: var(--clr-primary-10);
+  border-radius: 50%;
+  border: 4px solid var(--clr-primary-4) ;
+  opacity: 0.50;
 }
+
 .links-container {
   height: 0;
   overflow: hidden;
@@ -255,9 +310,14 @@ nav {
   transition: var(--transition);
   font-weight: bold;
   padding: 0.75rem 0;
+  text-shadow: 0 0 1px var(--clr-black);
 }
 .links a:hover {
   color: var(--clr-grey-1);
+  background:hsla(21, 43%, 65%, 0.50);
+  padding: 0.5rem;
+  border-radius: 35px;
+  transform: perspective(10);
 }
 @media screen and (min-width: 800px) {
   nav {
@@ -302,8 +362,6 @@ nav {
 /* hero */
 header {
   min-height: 100vh;
-  /* background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
-    url( https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGYyYWYxZjgxZTU2ZjYwYzZhYmZkNzg5NTZlMDgyMDk4YmE3ZTkzNSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/zP6A7ukEcjrAfvTHoS/giphy-downsized-large.gif) center/cover repeat; */
 }
 
 header video {
@@ -325,6 +383,7 @@ header video {
 }
 .container h1 {
   color: var(--clr-white);
+  text-shadow: 0 0 1px var(--clr-black);
   text-transform: uppercase;
 }
 .container p {
@@ -342,6 +401,7 @@ header video {
 .title h2 {
   text-align: center;
   text-transform: uppercase;
+  padding-top: 25px;
 }
 .title span {
   color: var(--clr-secondary);
@@ -350,11 +410,12 @@ header video {
 #Services,
 #Rentals,
 #Gallery {
-  height: 80vh;
+  height: auto;
 }
 #services {
   background: var(--clr-white);
 }
+
 footer {
   background: var(--clr-grey-1);
   padding: 5rem 1rem;
@@ -398,5 +459,12 @@ footer p {
   }
   100% {
     transform: scale(1);
+  }
+}
+@media screen and (max-width:720px) {
+  .logo {
+    width: 100px;
+    height: 100px;
+    opacity: 1;
   }
 }
