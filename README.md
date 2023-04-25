@@ -1,2 +1,5 @@
-# Essential-Party-Rentals
+# Bliss Rentals
+
+# README COMING SOON
+
  
